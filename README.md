@@ -9,7 +9,7 @@ $ wget https://nginx.org/download/nginx-1.24.0.tar.gz
 $ tar -zxf nginx-1.24.0.tar.gz && rm -rf nginx-1.24.0.tar.gz
 $ git clone https://github.com/yunsur/ngx_ip2region.git
 $ git clone https://github.com/lionsoul2014/ip2region.git
-$ cd cd ip2region/binding/c
+$ cd ip2region/binding/c
 $ make xdb_searcher_lib
 $ cd ../../../nginx-1.24.0
 $ ./configure                                                            \
@@ -61,4 +61,4 @@ nginx access log sample
 
 Made with ♥ by yunsur
 
-Thanks ♥ by Wu Jian Ping
+Thanks ♥ Wu Jian Ping
