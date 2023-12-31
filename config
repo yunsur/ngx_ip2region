@@ -1,0 +1,22 @@
+ngx_addon_name=ngx_stream_ip2region_module
+
+NGX_STREAM_IP2REGION_SRCS="                                                           \
+                $ngx_addon_dir/src/ngx_stream_ip2region_module.c                      \
+                "
+
+NGX_STREAM_IP2REGION_DEPS="                                                           \
+                "
+
+if test -n "$ngx_module_link"; then
+    ngx_module_type=STREAM
+    ngx_module_name=$ngx_addon_name
+    ngx_module_deps="$NGX_STREAM_IP2REGION_DEPS"
+    ngx_module_srcs="$NGX_STREAM_IP2REGION_SRCS"
+    ngx_module_libs="-lxdb_searcher"
+
+    . auto/module
+else
+    STREAM_MODULES="$STREAM_MODULES $ngx_addon_name"
+    NGX_ADDON_DEPS="$NGX_ADDON_DEPS $NGX_STREAM_IP2REGION_DEPS"
+    NGX_ADDON_SRCS="$NGX_ADDON_SRCS $NGX_STREAM_IP2REGION_SRCS"
+fi
